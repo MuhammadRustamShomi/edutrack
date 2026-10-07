@@ -159,7 +159,7 @@ class reaches React / Next.js.
 - [x] Courses: list, add, view
 - [x] Batches: list, add, view
 - [x] Students: list, add, view
-- [ ] Enrollments: list, add
+- [x] Enrollments: list, add
 - [ ] Fee Invoices: list, add, view (printable)
 - [ ] Certificates: list, view (printable)
 - [ ] Mobile check on every page

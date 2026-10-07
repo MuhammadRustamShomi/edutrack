@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students | EduTrack</title>
+    <title>Enrollments | EduTrack</title>
 
     <!-- Bootstrap, Bootstrap Icons, Poppins font and our own styles -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -45,8 +45,8 @@
                     <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="courses.html"><i class="bi bi-journal-bookmark me-2"></i>Courses</a></li>
                     <li class="nav-item"><a class="nav-link" href="batches.html"><i class="bi bi-calendar3 me-2"></i>Batches</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="students.html"><i class="bi bi-people me-2"></i>Students</a></li>
-                    <li class="nav-item"><a class="nav-link" href="enrollments.html"><i class="bi bi-person-check me-2"></i>Enrollments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="students.html"><i class="bi bi-people me-2"></i>Students</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="enrollments.html"><i class="bi bi-person-check me-2"></i>Enrollments</a></li>
                     <li class="nav-item"><a class="nav-link" href="invoices.html"><i class="bi bi-receipt me-2"></i>Fee Invoices</a></li>
                     <li class="nav-item"><a class="nav-link" href="certificates.html"><i class="bi bi-award me-2"></i>Certificates</a></li>
                 </ul>
@@ -56,39 +56,54 @@
             <main class="col-lg-10 p-4">
 
                 <!-- Page title and breadcrumb -->
-                <h3 class="fw-semibold mb-1">Students</h3>
+                <h3 class="fw-semibold mb-1">Enrollments</h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Students</li>
+                        <li class="breadcrumb-item active" aria-current="page">Enrollments</li>
                     </ol>
                 </nav>
 
-                <!-- Students table -->
+                <!-- Enrollments table -->
                 <div class="card border-0 shadow-sm">
 
-                    <!-- Header row: search, status filter and Add New button (visual only in Phase 1) -->
+                    <!-- Header row: search, batch and status filters, Add New button (visual only in Phase 1) -->
                     <div class="card-header bg-white py-3">
-                        <form class="row g-2 align-items-center" action="students.html" method="get">
-                            <div class="col-md-5">
+                        <form class="row g-2 align-items-center" action="enrollments.html" method="get">
+                            <div class="col-md-4">
                                 <div class="input-group">
-                                    <label for="search" class="visually-hidden">Search students</label>
-                                    <input type="text" class="form-control" id="search" name="search" placeholder="Search by name, email or phone...">
+                                    <label for="search" class="visually-hidden">Search enrollments</label>
+                                    <input type="text" class="form-control" id="search" name="search" placeholder="Search by student...">
                                     <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-2">
+                                <label for="filter_batch" class="visually-hidden">Filter by batch</label>
+                                <select class="form-select" id="filter_batch" name="batch_id">
+                                    <option value="" selected>All batches</option>
+                                    <option value="1">WD-2610</option>
+                                    <option value="2">GD-2610</option>
+                                    <option value="3">PY-2609</option>
+                                    <option value="4">DM-2609</option>
+                                    <option value="5">GD-2609</option>
+                                    <option value="6">LV-2611</option>
+                                    <option value="7">RN-2611</option>
+                                    <option value="8">WD-2607</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
                                 <label for="filter_status" class="visually-hidden">Filter by status</label>
                                 <select class="form-select" id="filter_status" name="status">
                                     <option value="" selected>All statuses</option>
                                     <option value="active">Active</option>
+                                    <option value="pending">Pending</option>
                                     <option value="completed">Completed</option>
                                     <option value="dropped">Dropped</option>
                                 </select>
                             </div>
                             <div class="col-md-4 text-md-end">
-                                <a href="student-add.html" class="btn btn-primary">
-                                    <i class="bi bi-plus-lg me-1"></i> Add New Student
+                                <a href="enrollment-add.html" class="btn btn-primary">
+                                    <i class="bi bi-plus-lg me-1"></i> New Enrollment
                                 </a>
                             </div>
                         </form>
@@ -99,172 +114,157 @@
                             <table class="table table-hover align-middle text-nowrap mb-0">
                                 <thead class="table-light">
                                     <tr>
+                                        <th>#</th>
                                         <th>Student</th>
-                                        <th>Phone</th>
-                                        <th>Current Batch</th>
-                                        <th>Joined</th>
+                                        <th>Course</th>
+                                        <th>Batch</th>
+                                        <th>Enrolled On</th>
                                         <th>Status</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td>ENR-1059</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <div class="avatar rounded-circle bg-primary-subtle text-primary fw-semibold d-flex align-items-center justify-content-center me-2">AR</div>
-                                                <div>
-                                                    <div class="fw-medium">Ali Raza</div>
-                                                    <small class="text-muted">ali.raza@gmail.com</small>
-                                                </div>
+                                                <span class="fw-medium">Ali Raza</span>
                                             </div>
                                         </td>
-                                        <td>0300-1234567</td>
+                                        <td>Web Development</td>
                                         <td>WD-2610</td>
-                                        <td>02 Jul 2026</td>
+                                        <td>05 Oct 2026</td>
                                         <td><span class="badge bg-success">Active</span></td>
                                         <td>
-                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a>
-                                            <a href="student-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View student"><i class="bi bi-eye"></i></a>
+                                            <a href="enrollment-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
                                             <button type="button" class="btn btn-sm btn-outline-danger" title="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td>ENR-1058</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <div class="avatar rounded-circle bg-primary-subtle text-primary fw-semibold d-flex align-items-center justify-content-center me-2">AS</div>
-                                                <div>
-                                                    <div class="fw-medium">Ayesha Siddiqui</div>
-                                                    <small class="text-muted">ayesha.siddiqui@gmail.com</small>
-                                                </div>
+                                                <span class="fw-medium">Ayesha Siddiqui</span>
                                             </div>
                                         </td>
-                                        <td>0322-1112233</td>
+                                        <td>Graphic Design</td>
                                         <td>GD-2610</td>
                                         <td>04 Oct 2026</td>
                                         <td><span class="badge bg-success">Active</span></td>
                                         <td>
-                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a>
-                                            <a href="student-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View student"><i class="bi bi-eye"></i></a>
+                                            <a href="enrollment-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
                                             <button type="button" class="btn btn-sm btn-outline-danger" title="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td>ENR-1057</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <div class="avatar rounded-circle bg-primary-subtle text-primary fw-semibold d-flex align-items-center justify-content-center me-2">HI</div>
-                                                <div>
-                                                    <div class="fw-medium">Hamza Iqbal</div>
-                                                    <small class="text-muted">hamza.iqbal@outlook.com</small>
-                                                </div>
+                                                <span class="fw-medium">Hamza Iqbal</span>
                                             </div>
                                         </td>
-                                        <td>0315-4455667</td>
+                                        <td>Laravel Development</td>
                                         <td>LV-2611</td>
                                         <td>03 Oct 2026</td>
-                                        <td><span class="badge bg-success">Active</span></td>
+                                        <td><span class="badge bg-warning text-dark">Pending</span></td>
                                         <td>
-                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a>
-                                            <a href="student-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View student"><i class="bi bi-eye"></i></a>
+                                            <a href="enrollment-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
                                             <button type="button" class="btn btn-sm btn-outline-danger" title="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td>ENR-1056</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar rounded-circle bg-primary-subtle text-primary fw-semibold d-flex align-items-center justify-content-center me-2">ZA</div>
+                                                <span class="fw-medium">Zainab Ahmed</span>
+                                            </div>
+                                        </td>
+                                        <td>Web Development</td>
+                                        <td>WD-2610</td>
+                                        <td>02 Oct 2026</td>
+                                        <td><span class="badge bg-success">Active</span></td>
+                                        <td>
+                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View student"><i class="bi bi-eye"></i></a>
+                                            <a href="enrollment-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                            <button type="button" class="btn btn-sm btn-outline-danger" title="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>ENR-1055</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <div class="avatar rounded-circle bg-primary-subtle text-primary fw-semibold d-flex align-items-center justify-content-center me-2">FN</div>
-                                                <div>
-                                                    <div class="fw-medium">Fatima Noor</div>
-                                                    <small class="text-muted">fatima.noor@gmail.com</small>
-                                                </div>
+                                                <span class="fw-medium">Fatima Noor</span>
                                             </div>
                                         </td>
-                                        <td>0331-7788990</td>
+                                        <td>Python Programming</td>
                                         <td>PY-2609</td>
                                         <td>01 Oct 2026</td>
                                         <td><span class="badge bg-success">Active</span></td>
                                         <td>
-                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a>
-                                            <a href="student-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View student"><i class="bi bi-eye"></i></a>
+                                            <a href="enrollment-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
                                             <button type="button" class="btn btn-sm btn-outline-danger" title="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div class="avatar rounded-circle bg-primary-subtle text-primary fw-semibold d-flex align-items-center justify-content-center me-2">BH</div>
-                                                <div>
-                                                    <div class="fw-medium">Bilal Hussain</div>
-                                                    <small class="text-muted">bilal.hussain@yahoo.com</small>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>0302-3344556</td>
-                                        <td>PY-2609</td>
-                                        <td>12 Sep 2026</td>
-                                        <td><span class="badge bg-success">Active</span></td>
-                                        <td>
-                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a>
-                                            <a href="student-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                                            <button type="button" class="btn btn-sm btn-outline-danger" title="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div class="avatar rounded-circle bg-primary-subtle text-primary fw-semibold d-flex align-items-center justify-content-center me-2">MJ</div>
-                                                <div>
-                                                    <div class="fw-medium">Mariam Javed</div>
-                                                    <small class="text-muted">mariam.javed@gmail.com</small>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>0341-6677889</td>
-                                        <td>GD-2609</td>
-                                        <td>05 Sep 2026</td>
-                                        <td><span class="badge bg-success">Active</span></td>
-                                        <td>
-                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a>
-                                            <a href="student-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                                            <button type="button" class="btn btn-sm btn-outline-danger" title="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
+                                        <td>ENR-1054</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <div class="avatar rounded-circle bg-primary-subtle text-primary fw-semibold d-flex align-items-center justify-content-center me-2">UT</div>
-                                                <div>
-                                                    <div class="fw-medium">Usman Tariq</div>
-                                                    <small class="text-muted">usman.tariq@gmail.com</small>
-                                                </div>
+                                                <span class="fw-medium">Usman Tariq</span>
                                             </div>
                                         </td>
-                                        <td>0313-9900112</td>
+                                        <td>Digital Marketing</td>
                                         <td>DM-2609</td>
                                         <td>28 Sep 2026</td>
                                         <td><span class="badge bg-danger">Dropped</span></td>
                                         <td>
-                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a>
-                                            <a href="student-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View student"><i class="bi bi-eye"></i></a>
+                                            <a href="enrollment-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
                                             <button type="button" class="btn btn-sm btn-outline-danger" title="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td>ENR-1053</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar rounded-circle bg-primary-subtle text-primary fw-semibold d-flex align-items-center justify-content-center me-2">BH</div>
+                                                <span class="fw-medium">Bilal Hussain</span>
+                                            </div>
+                                        </td>
+                                        <td>Python Programming</td>
+                                        <td>PY-2609</td>
+                                        <td>12 Sep 2026</td>
+                                        <td><span class="badge bg-success">Active</span></td>
+                                        <td>
+                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View student"><i class="bi bi-eye"></i></a>
+                                            <a href="enrollment-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                            <button type="button" class="btn btn-sm btn-outline-danger" title="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>ENR-1052</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <div class="avatar rounded-circle bg-primary-subtle text-primary fw-semibold d-flex align-items-center justify-content-center me-2">NA</div>
-                                                <div>
-                                                    <div class="fw-medium">Nimra Aslam</div>
-                                                    <small class="text-muted">nimra.aslam@gmail.com</small>
-                                                </div>
+                                                <span class="fw-medium">Nimra Aslam</span>
                                             </div>
                                         </td>
-                                        <td>0334-5566001</td>
+                                        <td>Web Development</td>
                                         <td>WD-2607</td>
                                         <td>02 Jul 2026</td>
                                         <td><span class="badge bg-secondary">Completed</span></td>
                                         <td>
-                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a>
-                                            <a href="student-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="student-view.html" class="btn btn-sm btn-outline-secondary" title="View student"><i class="bi bi-eye"></i></a>
+                                            <a href="enrollment-add.html" class="btn btn-sm btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
                                             <button type="button" class="btn btn-sm btn-outline-danger" title="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i></button>
                                         </td>
                                     </tr>
@@ -275,15 +275,15 @@
 
                     <!-- Pagination (static in Phase 1) -->
                     <div class="card-footer bg-white d-flex flex-wrap justify-content-between align-items-center gap-2">
-                        <small class="text-muted">Showing 1 to 8 of 248 students</small>
-                        <nav aria-label="Students pages">
+                        <small class="text-muted">Showing 1 to 8 of 312 enrollments</small>
+                        <nav aria-label="Enrollments pages">
                             <ul class="pagination pagination-sm mb-0">
                                 <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
                                 <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
                                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                 <li class="page-item disabled"><a class="page-link" href="#">&hellip;</a></li>
-                                <li class="page-item"><a class="page-link" href="#">31</a></li>
+                                <li class="page-item"><a class="page-link" href="#">39</a></li>
                                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
                             </ul>
                         </nav>
@@ -300,15 +300,16 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel"><i class="bi bi-trash text-danger me-2"></i>Delete student</h5>
+                    <h5 class="modal-title" id="deleteModalLabel"><i class="bi bi-trash text-danger me-2"></i>Delete enrollment</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Are you sure you want to delete this student? Their enrollments and invoices will be removed too.
+                    Are you sure you want to delete this enrollment? Its invoices and certificate will be removed too.
+                    To keep the record, edit it and set the status to Dropped instead.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <a href="students.html" class="btn btn-danger"><i class="bi bi-trash me-1"></i> Delete</a>
+                    <a href="enrollments.html" class="btn btn-danger"><i class="bi bi-trash me-1"></i> Delete</a>
                 </div>
             </div>
         </div>
