@@ -157,7 +157,7 @@ class reaches React / Next.js.
 - [x] `index.html` (login)
 - [x] `dashboard.html`
 - [x] Courses: list, add, view
-- [ ] Batches: list, add, view
+- [x] Batches: list, add, view
 - [ ] Students: list, add, view
 - [ ] Enrollments: list, add
 - [ ] Fee Invoices: list, add, view (printable)
