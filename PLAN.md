@@ -156,7 +156,7 @@ class reaches React / Next.js.
 - [ ] Shared layout (navbar + sidebar) finalised
 - [x] `index.html` (login)
 - [x] `dashboard.html`
-- [ ] Courses: list, add, view
+- [x] Courses: list, add, view
 - [ ] Batches: list, add, view
 - [ ] Students: list, add, view
 - [ ] Enrollments: list, add
