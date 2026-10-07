@@ -170,4 +170,4 @@ class reaches React / Next.js.
 
 ### Assignment 04
 - [x] Write `README.md` (what the project is, modules, screenshots, how to open)
-- [ ] Push to GitHub, post the link in the group
+- [x] Push to GitHub, post the link in the group
