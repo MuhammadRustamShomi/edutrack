@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice INV-1044 | EduTrack</title>
+
+    <!-- Bootstrap, Bootstrap Icons, Poppins font and our own styles -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Top navbar -->
+    <nav class="navbar navbar-dark bg-brand d-print-none">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-semibold" href="dashboard.html">
+                <i class="bi bi-mortarboard-fill me-2"></i>EduTrack
+            </a>
+            <div class="d-flex align-items-center">
+                <span class="text-white me-3 d-none d-sm-inline">
+                    <i class="bi bi-person-circle me-1"></i> Sana Malik (Admin)
+                </span>
+                <a href="index.html" class="btn btn-sm btn-outline-light">
+                    <i class="bi bi-box-arrow-right me-1"></i> Logout
+                </a>
+                <!-- Menu button: shows the sidebar on small screens -->
+                <button class="navbar-toggler ms-2 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <nav id="sidebarMenu" class="col-lg-2 sidebar collapse d-lg-block p-3 d-print-none">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html"><i class="bi bi-journal-bookmark me-2"></i>Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="batches.html"><i class="bi bi-calendar3 me-2"></i>Batches</a></li>
+                    <li class="nav-item"><a class="nav-link" href="students.html"><i class="bi bi-people me-2"></i>Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="enrollments.html"><i class="bi bi-person-check me-2"></i>Enrollments</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="invoices.html"><i class="bi bi-receipt me-2"></i>Fee Invoices</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certificates.html"><i class="bi bi-award me-2"></i>Certificates</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content area -->
+            <main class="col-lg-10 p-4">
+
+                <!-- Page title, breadcrumb and buttons (not printed) -->
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 d-print-none">
+                    <div>
+                        <h3 class="fw-semibold mb-1">Invoice INV-1044</h3>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="invoices.html">Fee Invoices</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">INV-1044</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="mb-3">
+                        <a href="invoices.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Back</a>
+                        <a href="invoice-add.html" class="btn btn-primary ms-1"><i class="bi bi-pencil-square me-1"></i> Edit</a>
+                    </div>
+                </div>
+
+                <!-- Print hint (no JavaScript in Phase 1, so printing is done with the browser) -->
+                <div class="alert alert-light border d-flex align-items-center d-print-none" role="alert">
+                    <i class="bi bi-printer fs-5 me-2"></i>
+                    <div>To print or save as PDF, press <kbd>Ctrl</kbd> + <kbd>P</kbd>. Only the invoice is printed.</div>
+                </div>
+
+                <!-- Invoice -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4 p-md-5">
+
+                        <!-- Invoice header: institute details and invoice number -->
+                        <div class="row g-3 align-items-start mb-4">
+                            <div class="col-sm-7">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="stat-icon rounded-3 d-flex align-items-center justify-content-center bg-brand text-white me-2">
+                                        <i class="bi bi-mortarboard-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="fw-bold mb-0">EduTrack</h4>
+                                        <small class="text-muted">Training Institute</small>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-0">
+                                    Office 4, 2nd Floor, Main Boulevard, Johar Town, Lahore<br>
+                                    042-35123456 &middot; info@edutrack.pk
+                                </p>
+                            </div>
+                            <div class="col-sm-5 text-sm-end">
+                                <h3 class="fw-bold text-uppercase mb-1">Fee Invoice</h3>
+                                <p class="mb-1"><span class="text-muted">Invoice #</span> <span class="fw-semibold">INV-1044</span></p>
+                                <p class="mb-1"><span class="text-muted">Issued:</span> 05 Oct 2026</p>
+                                <p class="mb-2"><span class="text-muted">Due:</span> 20 Oct 2026</p>
+                                <span class="badge bg-warning text-dark fs-6">Pending</span>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- Student and batch details -->
+                        <div class="row g-3 my-2">
+                            <div class="col-sm-6">
+                                <p class="text-muted small text-uppercase fw-semibold mb-1">Billed To</p>
+                                <p class="fw-semibold mb-0">Ali Raza</p>
+                                <p class="mb-0">Student ID: STU-1001</p>
+                                <p class="mb-0">0300-1234567</p>
+                                <p class="mb-0">ali.raza@gmail.com</p>
+                            </div>
+                            <div class="col-sm-6 text-sm-end">
+                                <p class="text-muted small text-uppercase fw-semibold mb-1">Enrollment</p>
+                                <p class="fw-semibold mb-0">Web Development</p>
+                                <p class="mb-0">Batch WD-2610 (ENR-1059)</p>
+                                <p class="mb-0">Mon&ndash;Fri, 6:00 PM</p>
+                                <p class="mb-0">05 Oct 2026 &ndash; 28 Dec 2026</p>
+                            </div>
+                        </div>
+
+                        <!-- Fee table -->
+                        <div class="table-responsive mt-4">
+                            <table class="table align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Description</th>
+                                        <th class="text-end">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Course fee &ndash; Web Development (12 weeks), batch WD-2610</td>
+                                        <td class="text-end">PKR 25,000</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="2" class="text-end">Total Due</th>
+                                        <th class="text-end fs-5">PKR 25,000</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                        <!-- Payment instructions and signature -->
+                        <div class="row g-4 mt-2">
+                            <div class="col-sm-7">
+                                <p class="text-muted small text-uppercase fw-semibold mb-1">How to Pay</p>
+                                <p class="small mb-1">Pay in cash at the front desk, or by bank transfer to:</p>
+                                <p class="small mb-1">Bank: Meezan Bank, Johar Town Branch<br>
+                                    Account title: EduTrack Training Institute<br>
+                                    Account no: 0123-0104567890</p>
+                                <p class="small text-muted mb-0">Please write the invoice number in the transfer reference.</p>
+                            </div>
+                            <div class="col-sm-5 text-sm-end align-self-end">
+                                <div class="border-top pt-2 d-inline-block px-4">
+                                    Accounts Office
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-center text-muted small mt-5 mb-0">
+                            Thank you for learning with EduTrack. This is a computer-generated invoice.
+                        </p>
+
+                    </div>
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

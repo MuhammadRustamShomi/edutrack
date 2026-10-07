@@ -77,3 +77,27 @@ body {
     height: 6rem;
     font-size: 2rem;
 }
+
+/* ---------- Printing (invoice and certificate pages, Ctrl+P) ---------- */
+/* Navbar, sidebar and buttons are hidden with Bootstrap's d-print-none in the HTML */
+@media print {
+    body {
+        background-color: #ffffff;
+    }
+
+    main {
+        padding: 0 !important;
+    }
+
+    .card {
+        box-shadow: none !important;
+    }
+
+    /* Browsers skip background colours when printing; keep badge and brand colours */
+    .badge,
+    .bg-brand,
+    .table-light {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}

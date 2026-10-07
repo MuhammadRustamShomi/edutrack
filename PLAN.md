@@ -160,7 +160,7 @@ class reaches React / Next.js.
 - [x] Batches: list, add, view
 - [x] Students: list, add, view
 - [x] Enrollments: list, add
-- [ ] Fee Invoices: list, add, view (printable)
+- [x] Fee Invoices: list, add, view (printable)
 - [ ] Certificates: list, view (printable)
 - [ ] Mobile check on every page
 - [ ] Same icons and badge colours on every page
