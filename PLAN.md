@@ -166,7 +166,7 @@ class reaches React / Next.js.
 - [x] Same icons and badge colours on every page
 
 ### Assignment 03
-- [ ] Install XAMPP, post screenshot in the group
+- [x] Install XAMPP, post screenshot in the group
 
 ### Assignment 04
 - [x] Write `README.md` (what the project is, modules, screenshots, how to open)
