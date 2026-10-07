@@ -153,7 +153,7 @@ class reaches React / Next.js.
 - [x] Project details image (`project-details.png`), same style as the class `bookly.png`
 
 ### Assignment 02: frontend
-- [ ] Shared layout (navbar + sidebar) finalised
+- [x] Shared layout (navbar + sidebar) finalised
 - [x] `index.html` (login)
 - [x] `dashboard.html`
 - [x] Courses: list, add, view
@@ -161,7 +161,7 @@ class reaches React / Next.js.
 - [x] Students: list, add, view
 - [x] Enrollments: list, add
 - [x] Fee Invoices: list, add, view (printable)
-- [ ] Certificates: list, view (printable)
+- [x] Certificates: list, view (printable)
 - [ ] Mobile check on every page
 - [ ] Same icons and badge colours on every page
 

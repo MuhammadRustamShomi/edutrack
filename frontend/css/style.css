@@ -78,6 +78,81 @@ body {
     font-size: 2rem;
 }
 
+/* ---------- Certificate ---------- */
+/* Outer frame in brand blue, inner frame in gold */
+.certificate {
+    background-color: #fffdf6;
+    border: 12px solid var(--brand);
+    padding: 0.75rem;
+    max-width: 1000px;
+    page: certificate; /* prints on the landscape page set below */
+}
+
+.certificate-inner {
+    border: 3px double #c9a227;
+    padding: 3rem 2.5rem;
+}
+
+.certificate-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    color: var(--brand);
+}
+
+.certificate-subtitle {
+    letter-spacing: 0.4rem;
+    color: #c9a227;
+}
+
+.certificate-name {
+    font-size: 2.75rem;
+    font-weight: 600;
+    border-bottom: 2px solid #c9a227;
+    padding: 0 2rem 0.25rem;
+}
+
+.certificate-seal {
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 2.75rem;
+    background-color: #c9a227;
+    color: #ffffff;
+}
+
+.signature-line {
+    border-top: 1px solid #6b7280;
+    width: 13rem;
+    max-width: 100%;
+}
+
+/* Smaller certificate text on phones */
+@media (max-width: 575.98px) {
+    .certificate-inner {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .certificate-title {
+        font-size: 1.6rem;
+        letter-spacing: 0.15rem;
+    }
+
+    .certificate-subtitle {
+        letter-spacing: 0.2rem;
+    }
+
+    .certificate-name {
+        font-size: 2rem;
+        padding: 0 0.5rem 0.25rem;
+    }
+}
+
+/* Only the certificate page is printed in landscape */
+@page certificate {
+    size: A4 landscape;
+    margin: 10mm;
+}
+
 /* ---------- Printing (invoice and certificate pages, Ctrl+P) ---------- */
 /* Navbar, sidebar and buttons are hidden with Bootstrap's d-print-none in the HTML */
 @media print {
@@ -93,10 +168,40 @@ body {
         box-shadow: none !important;
     }
 
+    /* Fit the certificate on one landscape page */
+    main {
+        width: 100% !important;
+    }
+
+    .certificate {
+        max-width: none;
+        break-inside: avoid;
+    }
+
+    .certificate-inner {
+        padding: 1.25rem 2rem;
+    }
+
+    .certificate-title {
+        font-size: 2.1rem;
+    }
+
+    .certificate-name {
+        font-size: 2.25rem;
+    }
+
+    .certificate-seal {
+        width: 4.5rem;
+        height: 4.5rem;
+        font-size: 2.25rem;
+    }
+
     /* Browsers skip background colours when printing; keep badge and brand colours */
     .badge,
     .bg-brand,
-    .table-light {
+    .table-light,
+    .certificate,
+    .certificate-seal {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
