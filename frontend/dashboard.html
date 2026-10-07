@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | EduTrack</title>
+
+    <!-- Bootstrap, Bootstrap Icons, Poppins font and our own styles -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Top navbar -->
+    <nav class="navbar navbar-dark bg-brand d-print-none">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-semibold" href="dashboard.html">
+                <i class="bi bi-mortarboard-fill me-2"></i>EduTrack
+            </a>
+            <div class="d-flex align-items-center">
+                <span class="text-white me-3 d-none d-sm-inline">
+                    <i class="bi bi-person-circle me-1"></i> Sana Malik (Admin)
+                </span>
+                <a href="index.html" class="btn btn-sm btn-outline-light">
+                    <i class="bi bi-box-arrow-right me-1"></i> Logout
+                </a>
+                <!-- Menu button: shows the sidebar on small screens -->
+                <button class="navbar-toggler ms-2 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <nav id="sidebarMenu" class="col-lg-2 sidebar collapse d-lg-block p-3 d-print-none">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link active" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html"><i class="bi bi-journal-bookmark me-2"></i>Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="batches.html"><i class="bi bi-calendar3 me-2"></i>Batches</a></li>
+                    <li class="nav-item"><a class="nav-link" href="students.html"><i class="bi bi-people me-2"></i>Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="enrollments.html"><i class="bi bi-person-check me-2"></i>Enrollments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="invoices.html"><i class="bi bi-receipt me-2"></i>Fee Invoices</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certificates.html"><i class="bi bi-award me-2"></i>Certificates</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content area -->
+            <main class="col-lg-10 p-4">
+
+                <!-- Page title and breadcrumb -->
+                <h3 class="fw-semibold mb-1">Dashboard</h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                    </ol>
+                </nav>
+
+                <!-- Stats cards -->
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="stat-icon rounded-3 d-flex align-items-center justify-content-center bg-primary-subtle text-primary me-3">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <div>
+                                    <p class="text-muted small mb-0">Total Students</p>
+                                    <h4 class="fw-bold mb-0">248</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="stat-icon rounded-3 d-flex align-items-center justify-content-center bg-success-subtle text-success me-3">
+                                    <i class="bi bi-calendar3"></i>
+                                </div>
+                                <div>
+                                    <p class="text-muted small mb-0">Active Batches</p>
+                                    <h4 class="fw-bold mb-0">12</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="stat-icon rounded-3 d-flex align-items-center justify-content-center bg-info-subtle text-info me-3">
+                                    <i class="bi bi-cash-stack"></i>
+                                </div>
+                                <div>
+                                    <p class="text-muted small mb-0">Fees Collected (Oct)</p>
+                                    <h4 class="fw-bold mb-0">PKR 485,000</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="stat-icon rounded-3 d-flex align-items-center justify-content-center bg-warning-subtle text-warning me-3">
+                                    <i class="bi bi-receipt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-muted small mb-0">Pending Invoices</p>
+                                    <h4 class="fw-bold mb-0">17</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-4">
+
+                    <!-- Recent enrollments table -->
+                    <div class="col-lg-8">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h6 class="fw-semibold mb-0"><i class="bi bi-person-check me-2"></i>Recent Enrollments</h6>
+                                <a href="enrollments.html" class="btn btn-sm btn-outline-primary">View all</a>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Student</th>
+                                                <th>Course</th>
+                                                <th>Batch</th>
+                                                <th>Enrolled On</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Ali Raza</td>
+                                                <td>Web Development</td>
+                                                <td>WD-2610</td>
+                                                <td>05 Oct 2026</td>
+                                                <td><span class="badge bg-success">Active</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ayesha Siddiqui</td>
+                                                <td>Graphic Design</td>
+                                                <td>GD-2610</td>
+                                                <td>04 Oct 2026</td>
+                                                <td><span class="badge bg-success">Active</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hamza Iqbal</td>
+                                                <td>Laravel Development</td>
+                                                <td>LV-2611</td>
+                                                <td>03 Oct 2026</td>
+                                                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fatima Noor</td>
+                                                <td>Python Programming</td>
+                                                <td>PY-2609</td>
+                                                <td>01 Oct 2026</td>
+                                                <td><span class="badge bg-success">Active</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Usman Tariq</td>
+                                                <td>Digital Marketing</td>
+                                                <td>DM-2609</td>
+                                                <td>28 Sep 2026</td>
+                                                <td><span class="badge bg-danger">Dropped</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming batches list -->
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-white">
+                                <h6 class="fw-semibold mb-0"><i class="bi bi-calendar3 me-2"></i>Upcoming Batches</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="fw-medium">Laravel Development</div>
+                                        <small class="text-muted">LV-2611 · Starts 02 Nov 2026</small>
+                                    </div>
+                                    <span class="badge bg-warning text-dark">Upcoming</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="fw-medium">React &amp; Next.js</div>
+                                        <small class="text-muted">RN-2611 · Starts 09 Nov 2026</small>
+                                    </div>
+                                    <span class="badge bg-warning text-dark">Upcoming</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="fw-medium">MS Office Essentials</div>
+                                        <small class="text-muted">MO-2611 · Starts 16 Nov 2026</small>
+                                    </div>
+                                    <span class="badge bg-warning text-dark">Upcoming</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="fw-medium">Web Development</div>
+                                        <small class="text-muted">WD-2612 · Starts 01 Dec 2026</small>
+                                    </div>
+                                    <span class="badge bg-warning text-dark">Upcoming</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Pending fees table -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                        <h6 class="fw-semibold mb-0"><i class="bi bi-receipt me-2"></i>Pending Fees</h6>
+                        <a href="invoices.html" class="btn btn-sm btn-outline-primary">View all</a>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Invoice #</th>
+                                        <th>Student</th>
+                                        <th>Batch</th>
+                                        <th>Amount</th>
+                                        <th>Due Date</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>INV-1042</td>
+                                        <td>Hamza Iqbal</td>
+                                        <td>LV-2611</td>
+                                        <td>PKR 35,000</td>
+                                        <td>15 Oct 2026</td>
+                                        <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                        <td><a href="invoice-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-1039</td>
+                                        <td>Zainab Ahmed</td>
+                                        <td>WD-2610</td>
+                                        <td>PKR 25,000</td>
+                                        <td>10 Oct 2026</td>
+                                        <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                        <td><a href="invoice-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-1031</td>
+                                        <td>Bilal Hussain</td>
+                                        <td>PY-2609</td>
+                                        <td>PKR 20,000</td>
+                                        <td>30 Sep 2026</td>
+                                        <td><span class="badge bg-danger">Overdue</span></td>
+                                        <td><a href="invoice-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-1027</td>
+                                        <td>Mariam Javed</td>
+                                        <td>GD-2609</td>
+                                        <td>PKR 18,000</td>
+                                        <td>25 Sep 2026</td>
+                                        <td><span class="badge bg-danger">Overdue</span></td>
+                                        <td><a href="invoice-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-1044</td>
+                                        <td>Ali Raza</td>
+                                        <td>WD-2610</td>
+                                        <td>PKR 25,000</td>
+                                        <td>20 Oct 2026</td>
+                                        <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                        <td><a href="invoice-view.html" class="btn btn-sm btn-outline-secondary" title="View"><i class="bi bi-eye"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

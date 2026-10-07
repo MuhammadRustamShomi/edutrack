@@ -143,19 +143,19 @@ class reaches React / Next.js.
 ## 8. Checklist
 
 ### Setup
-- [ ] Create `edutrack/` with `frontend/` and `backend/` folders
-- [ ] Copy the class `bootstrap/` folder into `frontend/`
-- [ ] Create `frontend/css/style.css` and `frontend/images/`
-- [ ] Add `backend/README.md` placeholder
-- [ ] `git init`, add `.gitignore`, first commit
+- [x] Create `edutrack/` with `frontend/` and `backend/` folders
+- [x] Copy the class `bootstrap/` folder into `frontend/`
+- [x] Create `frontend/css/style.css` and `frontend/images/`
+- [x] Add `backend/README.md` placeholder
+- [x] `git init`, add `.gitignore`, first commit
 
 ### Assignment 01
 - [ ] Project details image (`project-details.png`), same style as the class `bookly.png`
 
 ### Assignment 02: frontend
 - [ ] Shared layout (navbar + sidebar) finalised
-- [ ] `index.html` (login)
-- [ ] `dashboard.html`
+- [x] `index.html` (login)
+- [x] `dashboard.html`
 - [ ] Courses: list, add, view
 - [ ] Batches: list, add, view
 - [ ] Students: list, add, view
