@@ -169,5 +169,5 @@ class reaches React / Next.js.
 - [ ] Install XAMPP, post screenshot in the group
 
 ### Assignment 04
-- [ ] Write `README.md` (what the project is, modules, screenshots, how to open)
+- [x] Write `README.md` (what the project is, modules, screenshots, how to open)
 - [ ] Push to GitHub, post the link in the group
