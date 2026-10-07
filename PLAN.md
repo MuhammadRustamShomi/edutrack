@@ -150,7 +150,7 @@ class reaches React / Next.js.
 - [x] `git init`, add `.gitignore`, first commit
 
 ### Assignment 01
-- [ ] Project details image (`project-details.png`), same style as the class `bookly.png`
+- [x] Project details image (`project-details.png`), same style as the class `bookly.png`
 
 ### Assignment 02: frontend
 - [ ] Shared layout (navbar + sidebar) finalised
