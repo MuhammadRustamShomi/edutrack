@@ -1,0 +1,16 @@
+# OS files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+
+# Phase 2: Laravel
+backend/vendor/
+backend/.env
+
+# Phase 3: React / Next.js
+node_modules/
