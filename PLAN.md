@@ -162,8 +162,8 @@ class reaches React / Next.js.
 - [x] Enrollments: list, add
 - [x] Fee Invoices: list, add, view (printable)
 - [x] Certificates: list, view (printable)
-- [ ] Mobile check on every page
-- [ ] Same icons and badge colours on every page
+- [x] Mobile check on every page
+- [x] Same icons and badge colours on every page
 
 ### Assignment 03
 - [ ] Install XAMPP, post screenshot in the group
